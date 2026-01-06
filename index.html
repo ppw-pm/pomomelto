@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomomelto — Focus Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./colors.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-title">
+        <img src="./assets/PomomeltoLogo.png" alt="Pomomelto" class="app-logo" />
+       </div>
+         <!-- Stamp Card Button -->
+        <button id="cardBtn" class="royalty-card-btn" aria-expanded="false" aria-controls="modalOverlayStamp">
+        <span class="card-icon">🎫</span>
+        <div>
+            <div class="stamp-count" id="stampCountDisplay">0</div>
+            <div class="stamp-count-label">stamps</div>
+        </div>
+       </button>
+      
+       <!-- <button id="musicToggle" class="btn btn-secondary" aria-pressed="false" title="Toggle ambient music">
+        Music: Off
+       </button>-->
+      </div>
+        </div>
+    </header>
+
+    <main class="app-main minimalist">
+      <div class="focus-stack">
+        <div class="drink-frame">
+            <img id="drinkImg" src="./assets/Ice/ice cube.png" alt="IceCube" class="ice-cube" />
+        </div>
+        <div class="time-display" id="timeDisplay" aria-live="polite">25:00</div>
+        <div class="status-text" id="statusText">Ready</div>
+        <div class="primary-actions">
+          <button id="startBtn" class="btn btn-primary"  type="button">Start</button>
+          <button id="pauseBtn" class="btn btn-secondary" type="button" disabled>Pause</button>
+          <button id="resetBtn" class="btn btn-ghost" type="button" disabled>Reset</button>
+        </div>
+        <button id="detailsBtn" class="link-button" type="button">Adjust Your Drink Order</button>
+      </div>
+    </main>
+
+
+    <!--<aside id="controlsDrawer" class="controls-drawer" aria-hidden="true">
+      <form id="timerForm" class="timer-form">
+        <h2>Session details</h2>
+        <label class="field">
+          <span>Session / Task Name</span>
+          <input id="sessionNameInput" type="text" placeholder="e.g., Study Chapter 5, Write Report..." maxlength="50" />
+        </label>
+        <label class="field">
+          <span>Duration (minutes)</span>
+          <input id="minutesInput" type="number" min="1" max="240" value="25" inputmode="numeric" />
+        </label>
+        <label class="field">
+          <span>Drink Type</span>
+          <select id="drinkSelect">
+            <option value="matcha" selected>Matcha</option>
+            <option value="coffee">Coffee</option>
+          </select>
+        </label>
+      </form>
+    </aside>
+    <div id="drawerBackdrop" class="drawer-backdrop" hidden></div> -->
+
+     <!--modal panel adjust your drink order-->
+    <div id="settingsModal" class="modalAdjustDrink hidden">
+        <div class="modal-content">
+            <h2>Adjust Your Drink Order</h2>
+    
+            <label>
+                Session Detail:
+                <input type="text" id="sessionNameInput" placeholder="Study, Work, Project…" />
+            </label>
+    
+            <label>
+                Session Length (minutes):
+                <input type="number" id="sessionLengthInput" value="25" min="1" />
+            </label>
+    
+            <label>
+                Break Duration (minutes):
+                <input type="number" id="breakLengthInput" value="5" min="1" />
+            </label>
+    
+            <label>
+                Drink Type:
+                <select id="drinkTypeInput">
+                    <option value="matcha">Matcha</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="chocolate">Chocolate</option>  
+                    <option value="icedlemontea">Iced Lemon Tea</option>         
+                </select>
+            </label>
+    
+            <div class="modal-buttons">
+                <button class="modal-saveBtn" id="saveSettingsBtn">Save</button>
+                <button class="modal-cancelBtn" id="closeSettingsBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+     <!-- Stamp Collection Modal -->
+     <div class="modal-overlayStamp" id="modalOverlayStamp">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <span>🎫</span>
+                    My Royalty Card
+                </h2>
+                <button class="close-btn" id="closeBtn">&times;</button>
+            </div>
+            
+            <div class="stamp-grid" id="stampGrid">
+                <!-- Stamps will be generated here -->
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">0 / 10 stamps collected</div>
+            
+            <div class="reward-message" id="rewardMessage">
+                🎉 Congratulations! You've earned a free reward!
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="app-footer">
+      <small>Colours: Sage, BlueGray, Cream palette. © 2025</small>
+    </footer>
+
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+  </html>
+
+
