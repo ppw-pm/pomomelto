@@ -1,0 +1,39 @@
+:root {
+	/* Sage - Primary */
+	--sage-200: #d1ebd1;
+	--sage-300: #bfdfbf;
+	--sage-400: #9caf88;
+	--sage-500: #7a9668;
+	--sage-600: #6b8459;
+	--sage-700: #5c724a;
+
+	/* BlueGray - Secondary */
+	--bluegray-200: #d6e1f0;
+	--bluegray-300: #b8cee8;
+	--bluegray-400: #889dc3;
+	--bluegray-500: #7a8bbb;
+	--bluegray-600: #6b7aa8;
+	--bluegray-700: #5c6b98;
+
+	/* Cream - Neutral */
+	--cream-200: #f5f1e8;
+	--cream-300: #f0ead8;
+	--cream-400: #e8dfc4;
+	--cream-500: #ddd2a8;
+	--cream-600: #cfc18a;
+	--cream-700: #b8a66d;
+
+	/* Semantic tokens */
+	--bg-page: #b2beae;
+	--bg-panel: #ffffff;
+	--text: #1a1f25;
+	--muted: #5f6b7a;
+	--border: #e1e5ec;
+	--primary: var(--sage-600);
+	--primary-strong: var(--sage-700);
+	--secondary: var(--bluegray-600);
+	--secondary-strong: var(--bluegray-700);
+	--focus: var(--bluegray-400);
+}
+
+
