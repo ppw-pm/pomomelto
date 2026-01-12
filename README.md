@@ -9,12 +9,12 @@ Pomomelto reimagines the Pomodoro Technique with a delightful twist. Instead of 
 
 ## ✨ Features
 
-- ⏱️ **Custom Focus Sessions** - Set your ideal focus duration
-- 🎵 **Playlist Generation** - Get music matched to your session length
-- 🧊 **Ice Melting Animation** - Watch your drink prepare as you focus
-- 🔔 **Break Notifications** - Gentle reminders when it's time to rest
-- 🎫 **Stamp Collection** - Earn and collect stamps for completed sessions
-- 📈 **Track Your Progress** - Build streaks and see your productivity grow
+-  **Custom Focus Sessions** - Set your ideal focus duration
+-  **Playlist Generation** - Get music matched to your session length
+-  **Ice Melting Animation** - Watch your drink prepare as you focus
+-  **Break Notifications** - Gentle reminders when it's time to rest
+-  **Stamp Collection** - Earn and collect stamps for completed sessions
+-  **Track Your Progress** - Build streaks and see your productivity grow
 
 ## 🎯 How It Works
 
