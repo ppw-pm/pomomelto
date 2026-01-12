@@ -33,28 +33,28 @@ const settingsModal = document.getElementById("settingsModal");
 // ------------------------------------
 const drinkTypes = {
     ice: [
-        "./assets/Ice/ice cube.png",
-        "./assets/Ice/IceMelt1.png",
-        "./assets/Ice/IceMelt2.png",
-        "./assets/Ice/IceMelt3.png",
-        "./assets/Ice/IceMelt4.png",
-        "./assets/Ice/IceMelt5.png"
+        "./assets/ice/ice cube.png",
+        "./assets/ice/IceMelt1.png",
+        "./assets/ice/IceMelt2.png",
+        "./assets/ice/IceMelt3.png",
+        "./assets/ice/IceMelt4.png",
+        "./assets/ice/IceMelt5.png"
     ],
     matcha: [
-        "./assets/Matcha/Matcha-1.png",
-        "./assets/Matcha/Matcha-2.png",
-        "./assets/Matcha/Matcha-3.png",
-        "./assets/Matcha/Matcha-4.png",
-        "./assets/Matcha/Matcha-5.png",
-        "./assets/Matcha/Matcha-6.png"
+        "./assets/matcha/Matcha-1.png",
+        "./assets/matcha/Matcha-2.png",
+        "./assets/matcha/Matcha-3.png",
+        "./assets/matcha/Matcha-4.png",
+        "./assets/matcha/Matcha-5.png",
+        "./assets/matcha/Matcha-6.png"
     ],
     coffee: [
-        "./assets/Coffee/Coffee-1.png",
-        "./assets/Coffee/Coffee-2.png",
-        "./assets/Coffee/Coffee-3.png",
-        "./assets/Coffee/Coffee-4.png",
-        "./assets/Coffee/Coffee-5.png",
-        "./assets/Coffee/Coffee-6.png"
+        "./assets/coffee/Coffee-1.png",
+        "./assets/coffee/Coffee-2.png",
+        "./assets/coffee/Coffee-3.png",
+        "./assets/coffee/Coffee-4.png",
+        "./assets/coffee/Coffee-5.png",
+        "./assets/coffee/Coffee-6.png"
     ],
     chocolate: [
         "./assets/chocolate/Choco-1.png",
