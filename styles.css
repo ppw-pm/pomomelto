@@ -540,6 +540,13 @@ input.error {
 		padding: 10px 16px;
 		font-size: 14px;
 	}
+
+	.stamp-count{
+    	display: none;
+	}
+	.stamp-count-label{
+    	display: none;
+	}
 	
 	/*.btn-stamp {
 		padding: 8px 12px;
@@ -608,6 +615,13 @@ input.error {
 	.header-actions {
 		width: 100%;
 		justify-content: space-between;
+	}
+
+	.stamp-count{
+    	display: none;
+	}
+	.stamp-count-label{
+    	display: none;
 	}
 	
 /*	.btn-stamp {
