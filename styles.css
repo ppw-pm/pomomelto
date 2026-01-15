@@ -726,12 +726,17 @@ input.error {
 	}
 
 	.royalty-card-btn {
-    top: 10px;
-    right: 10px;
-    padding: 0.5rem 0.875rem;    /* 8px 14px */
-    border-radius: 10px;
-    font-size: 13px;
-    gap: 0.25rem;                /* 4px */
+    top: 12px;
+    right: 12px;
+    padding: 0.75rem;         /* 12px */
+    border-radius: 12px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    justify-content: center;
+    gap: 0;
+	background: transparent;    /* No white background */
+    box-shadow: none;          /* No shadow */
 }
 }
 
