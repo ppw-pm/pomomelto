@@ -718,7 +718,7 @@ input.error {
 }
 
 /* Very small devices */
-@media (max-width: 375px) {
+@media (max-width: 395px) {
 	.time-display {
 		font-size: 36px;
 	}
@@ -753,7 +753,7 @@ input.error {
 	}
 	
 	.card-icon {
-		font-size: 32px;         /* Make emoji bigger since no button background */
+		font-size: 34px;         /* Make emoji bigger since no button background */
 		line-height: 1;
 		display: block;
 		top: 20px
