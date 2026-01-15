@@ -635,10 +635,11 @@ input.error {
 	}
 	
 	.card-icon {
-		font-size: 36px;         /* Make emoji bigger since no button background */
+		font-size: 38px;         /* Make emoji bigger since no button background */
 		line-height: 1;
 		display: block;
-		top: 20px
+		top: 20px;
+		right: 20px;
 	}
 	
 /*	.btn-stamp {
@@ -753,10 +754,11 @@ input.error {
 	}
 	
 	.card-icon {
-		font-size: 34px;         /* Make emoji bigger since no button background */
+		font-size: 36px;         /* Make emoji bigger since no button background */
 		line-height: 1;
 		display: block;
-		top: 20px
+		top: 20px;
+		right: 20px;
 	}
 }
 
