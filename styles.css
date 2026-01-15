@@ -726,18 +726,24 @@ input.error {
 	}
 
 	.royalty-card-btn {
-    top: 12px;
-    right: 12px;
-    padding: 0.5rem;         
-    border-radius: 12px;
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    justify-content: center;
-    gap: 0;
-	background: transparent;    /* No white background */
-    box-shadow: none;          /* No shadow */
-}
+        top: 12px;
+        right: 12px;
+        padding: 0;              /* Remove all padding */
+	    border-radius: 0;        /* Remove border radius */
+	    width: auto;             /* Let icon define size */
+		height: auto;
+		min-width: unset;
+		background: transparent !important;
+		box-shadow: none !important;
+		border: none;            /* Remove any border */
+		gap: 0;
+	}
+	
+	.card-icon {
+		font-size: 32px;         /* Make emoji bigger since no button background */
+		line-height: 1;
+		display: block;
+	}
 }
 
 .modalAdjustDrink {
