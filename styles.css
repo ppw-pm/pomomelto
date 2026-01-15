@@ -541,6 +541,10 @@ input.error {
 		font-size: 14px;
 	}
 
+	.royalty-card-btn{
+		padding: 8px 14px;
+	}
+		
 	.stamp-count{
     	display: none;
 	}
@@ -638,8 +642,8 @@ input.error {
 		font-size: 38px;         /* Make emoji bigger since no button background */
 		line-height: 1;
 		display: block;
-		top: 20px;
-		right: 20px;
+		top: 30px;
+		right: 30px;
 	}
 	
 /*	.btn-stamp {
@@ -746,8 +750,8 @@ input.error {
 	.royalty-card-btn {
 		all: unset;              /* Removes ALL inherited styles */
 		position: fixed;
-		top: 12px;
-		right: 12px;
+		top: 20px;
+		right: 20px;
 		z-index: 100;
 		cursor: pointer;
 		display: block;
@@ -757,8 +761,8 @@ input.error {
 		font-size: 36px;         /* Make emoji bigger since no button background */
 		line-height: 1;
 		display: block;
-		top: 20px;
-		right: 20px;
+		top: 30px;
+		right: 30px;
 	}
 }
 
