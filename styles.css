@@ -623,6 +623,23 @@ input.error {
 	.stamp-count-label{
     	display: none;
 	}
+
+	.royalty-card-btn {
+		all: unset;              /* Removes ALL inherited styles */
+		position: fixed;
+		top: 12px;
+		right: 12px;
+		z-index: 100;
+		cursor: pointer;
+		display: block;
+	}
+	
+	.card-icon {
+		font-size: 36px;         /* Make emoji bigger since no button background */
+		line-height: 1;
+		display: block;
+		top: 20px
+	}
 	
 /*	.btn-stamp {
 		font-size: 12px;
@@ -701,7 +718,7 @@ input.error {
 }
 
 /* Very small devices */
-@media (max-width: 390px) {
+@media (max-width: 375px) {
 	.time-display {
 		font-size: 36px;
 	}
@@ -739,6 +756,7 @@ input.error {
 		font-size: 32px;         /* Make emoji bigger since no button background */
 		line-height: 1;
 		display: block;
+		top: 20px
 	}
 }
 
