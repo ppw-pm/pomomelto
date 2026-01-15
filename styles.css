@@ -717,6 +717,13 @@ input.error {
 	.app-main {
 		padding: 16px 10px;
 	}
+
+	.stamp-count{
+    	display: none;
+	}
+	.stamp-count-label{
+    	display: none;
+	}
 }
 
 .modalAdjustDrink {
