@@ -810,7 +810,8 @@ input.error {
 .modal-saveBtn {
     flex: 1;
     background: #7A8BB8;
-    min-width: 175px;
+	min-width: 80px; 
+    max-width: 200px; 
     height: 30px;
     padding: 10px;
     border-radius: 10px;
@@ -823,7 +824,8 @@ input.error {
 .modal-cancelBtn {
     flex: 1;
     background: #D6E1F0;
-    min-width: 175px;
+    min-width: 80px; 
+    max-width: 200px;
     height: 30px;
     padding: 10px;
     border-radius: 10px;
