@@ -765,7 +765,7 @@ input.error {
 		right: 30px;
 	}
 
-	.modal-saveBtn. .modal-cancelBtn {
+	.modal-saveBtn, .modal-cancelBtn {
         min-width: 80px;
         max-width: 120px;
         height: 28px;
