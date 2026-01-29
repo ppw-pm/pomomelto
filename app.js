@@ -269,6 +269,69 @@ settingsModal.addEventListener('click', (e) => {
     }
 });
 
+// Stamp Manager with 24-hour reset
+const StampManager = {
+    // Get stamps data from storage
+    getStampsData: function() {
+        const stampsData = localStorage.getItem('focusStampsData');
+        if (!stampsData) {
+            return { count: 0, lastReset: Date.now() };
+        }
+        return JSON.parse(stampsData);
+    },
+
+    // Save stamps data to storage
+    saveStampsData: function(data) {
+        localStorage.setItem('focusStampsData', JSON.stringify(data));
+    },
+
+    // Check if 24 hours have passed
+    shouldReset: function(lastReset) {
+        const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
+        return (Date.now() - lastReset) >= TWENTY_FOUR_HOURS;
+    },
+
+    // Get current stamp count (with auto-reset)
+    getCount: function() {
+        let data = this.getStampsData();
+        
+        if (this.shouldReset(data.lastReset)) {
+            data = { count: 0, lastReset: Date.now() };
+            this.saveStampsData(data);
+        }
+        
+        return data.count;
+    },
+
+    // Increment stamp count
+    incrementCount: function() {
+        let data = this.getStampsData();
+        
+        if (this.shouldReset(data.lastReset)) {
+            data = { count: 0, lastReset: Date.now() };
+        }
+        
+        data.count++;
+        this.saveStampsData(data);
+        return data.count;
+    },
+
+    // Get time until next reset
+    getTimeUntilReset: function() {
+        const data = this.getStampsData();
+        const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
+        const timeElapsed = Date.now() - data.lastReset;
+        const timeRemaining = TWENTY_FOUR_HOURS - timeElapsed;
+        
+        if (timeRemaining <= 0) return "Resetting...";
+        
+        const hours = Math.floor(timeRemaining / (60 * 60 * 1000));
+        const minutes = Math.floor((timeRemaining % (60 * 60 * 1000)) / (60 * 1000));
+        
+        return `Resets in ${hours}h ${minutes}m`;
+    }
+};
+
 // Stamp emojis
 const stampEmojis = ['☕', '🍵', '🧋', '🥤', '🍹', '🧃', '🫖'];
 
@@ -276,10 +339,16 @@ let stampCount = 0;
 
 // Load stamps from localStorage
 function loadStamps() {
-    const saved = localStorage.getItem('focusStamps');
-    if (saved) {
-        stampCount = parseInt(saved);
-        updateStampDisplay();
+    stampCount = StampManager.getCount();  // CHANGED: Use StampManager instead
+    updateStampDisplay();
+    updateResetTimer();  // NEW: Update timer on load
+}
+
+// Update reset timer display
+function updateResetTimer() {
+    const timerElement = document.getElementById('resetTimer');
+    if (timerElement) {
+        timerElement.textContent = StampManager.getTimeUntilReset();
     }
 }
 
@@ -359,9 +428,9 @@ function createStampToButton(emoji) {
 
 // Complete session and add stamp
 function completeSession() {
-    stampCount++;
-    saveStamps();
+    stampCount = StampManager.incrementCount();  // CHANGED: Use StampManager
     updateStampDisplay();
+    updateResetTimer();  // NEW: Update timer after completing session
     createFloatingStamp();
     
     // Check for reward (every 10 stamps)
@@ -427,3 +496,17 @@ updateModal();
 
 // Call completeSession() whenever a focus session is completed
 // Example: completeSession();
+
+// Update timer every minute
+setInterval(() => {
+    updateResetTimer();
+    // Check if reset happened and update display
+    const currentCount = StampManager.getCount();
+    if (currentCount !== stampCount) {
+        stampCount = currentCount;
+        updateStampDisplay();
+    }
+}, 60000); // Update every minute
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', loadStamps);
