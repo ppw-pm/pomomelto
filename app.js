@@ -341,12 +341,12 @@ let stampCount = 0;
 function loadStamps() {
     stampCount = StampManager.getCount();  // CHANGED: Use StampManager instead
     updateStampDisplay();
-    updateResetTimer();  // NEW: Update timer on load
+    updateStampReset();  // NEW: Update timer on load
 }
 
-// Update reset timer display
-function updateResetTimer() {
-    const timerElement = document.getElementById('resetTimer');
+// Update stamp reset display
+function updateStampReset() {
+    const timerElement = document.getElementById('stampReset');
     if (timerElement) {
         timerElement.textContent = StampManager.getTimeUntilReset();
     }
@@ -428,9 +428,9 @@ function createStampToButton(emoji) {
 
 // Complete session and add stamp
 function completeSession() {
-    stampCount = StampManager.incrementCount();  // CHANGED: Use StampManager
+    stampCount = StampManager.incrementCount();  
     updateStampDisplay();
-    updateResetTimer();  // NEW: Update timer after completing session
+    updateStampReset(); 
     createFloatingStamp();
     
     // Check for reward (every 10 stamps)
@@ -499,7 +499,7 @@ updateModal();
 
 // Update timer every minute
 setInterval(() => {
-    updateResetTimer();
+    updateStampReset();
     // Check if reset happened and update display
     const currentCount = StampManager.getCount();
     if (currentCount !== stampCount) {
